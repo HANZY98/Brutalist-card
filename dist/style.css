@@ -61,7 +61,7 @@ img {
 }
 
 .card .img {
-  background-image: url("/images/illustration-article.svg");
+  background-image: url("../images/illustration-article.svg");
   width: 335px;
   height: 200px;
   border-radius: 15px;
@@ -99,7 +99,7 @@ img {
   display: inline-block;
   width: 32px;
   height: 32px;
-  background-image: url("/images/image-avatar.webp");
+  background-image: url("../images/image-avatar.webp");
   background-repeat: no-repeat;
   background-size: contain;
 }
