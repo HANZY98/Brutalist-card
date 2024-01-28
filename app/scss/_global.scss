@@ -1,0 +1,120 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+a, a:visited, a:hover{
+  text-decoration: none;
+}
+
+h1, h2, h3{
+  margin-top:0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Figtree;
+  
+
+  background-color: $Yellow;
+  
+  
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+
+.card{
+  position: relative;
+  max-width: 380px;
+  padding: 20px;
+  background-color: $White;
+  border-radius: 15px;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 8px 8px black;
+  transition-duration:.25s;
+  &:hover{
+    transform:translate(2px, 2px);
+    box-shadow:12px 12px black;
+  }
+  
+  .img{
+    background-image: url('/images/illustration-article.svg');
+    width: 335px;
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  h1{
+    font-size: 1.5rem;
+    transition: color 0.1s ease-in-out;
+    &:hover{
+      color: $Yellow;
+      cursor: pointer;
+    }
+  }
+
+  .L{
+    font-weight: bold;
+    background-color: $Yellow;
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+    margin-bottom: 0;
+  }
+
+  .G{
+    color: $Grey;
+    font-weight: 500;
+  }
+
+  .profimg{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('/images/image-avatar.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .GH{
+    position: relative;
+    margin: 0;
+    bottom: 10px;
+    padding-left: 12px;
+    font-weight: bold;
+    
+  }
+
+  
+  
+}
+
+
+
+.hide-for-mobile{
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+
+.hide-for-desktop{
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
